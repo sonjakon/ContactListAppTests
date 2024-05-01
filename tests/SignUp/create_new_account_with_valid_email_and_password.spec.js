@@ -8,14 +8,6 @@ test('create new account with valid email and password - successful sign up', as
     const username = faker.internet.userName();
     const email = username + '@blondmail.com';
 
-    await test.step("register to Inbox", async () => {
-        await page.goto('https://inboxes.com/');
-        await page.getByRole('button', { name: 'Get my first inbox! arrow right' }).click();
-        await page.getByPlaceholder('jane1034').click();
-        await page.getByPlaceholder('jane1034').fill(username);
-        await page.getByRole('button', { name: 'Add Inbox' }).click();
-    })
-
     await test.step("sign up to Contact List App", async () => {
         await page.goto('https://thinking-tester-contact-list.herokuapp.com/');
         await page.getByRole('button', { name: 'Sign up' }).click();

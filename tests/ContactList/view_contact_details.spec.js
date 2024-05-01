@@ -12,7 +12,7 @@ test.beforeAll(async ({ browser }) => {
 test.use({ storageState: 'playwright/.auth/user.json' });
 
 test('view contact details - contact details are presented', async ({ page }) => {
-    await page.goto('https://thinking-tester-contact-list.herokuapp.com/');
+    await page.goto('https://thinking-tester-contact-list.herokuapp.com/contactList');
     await page.getByRole('cell', { name: 'Ime Prezime' }).click();
     await expect(page.getByText('First Name: Ime Last Name: Prezime Date of Birth: 2000-07-17 Email: sonjatests@b')).toBeVisible();
 });
