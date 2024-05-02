@@ -37,7 +37,7 @@ In order to run the tests written for Contact List App, follow these steps:
    npx playwright tests/* --ui --workers=1
    ```
 
-   Note:  This runs tests in serial mode because I noticed the app sometimes timeouts under heavy load. You can also comit the `--workers=1` parameter to run tests in parallel mode.
+   Note:  This runs tests in serial mode because I noticed the app sometimes timeouts under heavy load. You can also omit the `--workers=1` parameter to run tests in parallel mode.
 
 3. Click on the play button at the top to run all tests, or run individual tests.
 
